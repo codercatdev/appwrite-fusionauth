@@ -2,9 +2,13 @@
   // Web SDK
   import { Client, Account } from "appwrite";
 
+  import {
+    PUBLIC_APPWRITE_ENDPOINT,
+    PUBLIC_APPWRITE_PROJECT,
+  } from "$env/static/public";
   const client = new Client()
-    .setEndpoint("http://localhost/v1") // Your API Endpoint
-    .setProject("6536fc4083fb541ceaf0"); // Your project ID
+    .setEndpoint(PUBLIC_APPWRITE_ENDPOINT) // Your API Endpoint
+    .setProject(PUBLIC_APPWRITE_PROJECT); // Your project ID
 
   const account = new Account(client);
 </script>
